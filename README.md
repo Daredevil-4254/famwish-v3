@@ -1,4 +1,4 @@
-# FamWish Protocol V3 🚀
+# FamWish 🚀
 
 An ultra-premium, invite-only philanthropic auction platform designed for high-net-worth individuals. Built with a decoupled MERN+WebSocket architecture.
 
