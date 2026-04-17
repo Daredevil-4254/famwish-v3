@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const emd_controller_1 = require("../controllers/emd.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const router = (0, express_1.Router)();
+router.post('/create-order', auth_middleware_1.requireClerkAuth, emd_controller_1.createEmdOrder);
+router.post('/verify-payment', auth_middleware_1.requireClerkAuth, emd_controller_1.verifyEmdPayment);
+router.get('/status/:auctionId/:userId', auth_middleware_1.requireClerkAuth, emd_controller_1.checkEmdStatus);
+exports.default = router;
